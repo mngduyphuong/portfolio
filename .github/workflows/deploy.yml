@@ -26,9 +26,8 @@ jobs:
         run: npm run build
 
       - name: Configure Git
-      run: |
-        git config --global user.email "mngduyphuong@gmail.com"
-        git config --global user.name "mngduyphuong"
+        run: git config --global user.email "mngduyphuong@gmail.com"
+          git config --global user.name "mngduyphuong"
 
       - name: Deploy to GitHub Pages
         if: success()
