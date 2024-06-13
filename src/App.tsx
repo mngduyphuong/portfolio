@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 //page view
 import Home from "./views/Home";
 import Contact from "./views/Contact";
