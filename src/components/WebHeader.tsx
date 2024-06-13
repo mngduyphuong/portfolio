@@ -1,4 +1,4 @@
-import DesktopNav from "./desktop-nav";
+import DesktopNav from "./DesktopNav";
 import { Link } from "react-router-dom";
 import { ModeToggle } from "./mode-toggle";
 
@@ -9,7 +9,7 @@ function header() {
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/">
             <h1 className="text-4xl font-semibold">
-              Phuong<span className="text-primary">.</span>
+              Phuong<span className="text-primary"> &lt;&#47;&gt;</span>
             </h1>
           </Link>
           <div className="hidden lg:flex items-center gap-8">

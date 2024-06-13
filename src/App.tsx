@@ -1,23 +1,18 @@
 import { ThemeProvider } from "@/components/theme-provider";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-//page view
-import Home from "./views/Home";
-import Contact from "./views/Contact";
-import Resume from "./views/Resume";
+import { BrowserRouter as Router } from "react-router-dom";
 
 //components
-import Header from "./components/header";
+import WebHeader from "./components/WebHeader";
+import PageTransition from "./components/PageTransition";
+import StairTransition from "./components/StairTransition";
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Router basename="/portfolio">
-        <Header></Header>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
+        <WebHeader></WebHeader>
+        <StairTransition></StairTransition>
+        <PageTransition></PageTransition>
       </Router>
     </ThemeProvider>
   );
