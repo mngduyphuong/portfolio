@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const links = [
   {
@@ -22,6 +21,7 @@ const links = [
 
 const desktopNav = () => {
   const location = useLocation();
+
   return (
     <nav className="flex gap-8">
       {links.map((link, index) => {
