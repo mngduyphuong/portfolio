@@ -10,7 +10,7 @@ import Autoplay from "embla-carousel-autoplay";
 function Photo() {
   const plugin = useRef(Autoplay({ delay: 5000 }));
   const basePath = import.meta.env.BASE_URL;
-  const imageURL = ["/8bitpix.png", "/personalPhoto2.png"];
+  const imageURL = ["/8bitpix.png", "/personalPhoto2.png", "/claymation.png"];
   const pixelationKeyframes = {
     initial: {
       filter: "grayscale(100%) blur(5px) contrast(2) saturate(0.5) opacity(0)",
@@ -23,7 +23,7 @@ function Photo() {
         initial="initial"
         animate="animate"
         variants={pixelationKeyframes}
-        transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
+        transition={{ duration: 2, ease: "easeInOut", delay: 2 }}
       >
         <div className="w-[298px] h-[298px] lg:w-[450px] lg:h-[450px] mix-blend-lighten bg-accent rounded-full">
           <motion.div
@@ -39,7 +39,7 @@ function Photo() {
               onMouseLeave={plugin.current.reset}
             >
               <CarouselContent>
-                {Array.from({ length: 2 }).map((_, index) => (
+                {Array.from({ length: 3 }).map((_, index) => (
                   <CarouselItem key={index}>
                     <img
                       src={`${basePath}${imageURL[index]}`}
