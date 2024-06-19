@@ -1,4 +1,9 @@
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+} from "@/components/ui/sheet";
 import { Link, useLocation } from "react-router-dom";
 import { CiMenuFries } from "react-icons/ci";
 
@@ -35,11 +40,10 @@ function MobileNav() {
             Phuong
             <span className="text-primary"> &lt;&#47;&gt;</span>
           </h1>
-          {links.map((link, index) => {
-            return (
+          {links.map((link) => (
+            <SheetClose asChild key={link.path}>
               <Link
                 to={link.path}
-                key={index}
                 className={`${
                   link.path === location.pathname &&
                   "text-primary border-b-2 border-primary"
@@ -47,8 +51,8 @@ function MobileNav() {
               >
                 {link.name}
               </Link>
-            );
-          })}
+            </SheetClose>
+          ))}
         </SheetContent>
       </Sheet>
     </>

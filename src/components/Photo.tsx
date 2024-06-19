@@ -8,7 +8,9 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 
 function Photo() {
-  const plugin = useRef(Autoplay({ delay: 5000 }));
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: false, stopOnFocusIn: false })
+  );
   const basePath = import.meta.env.BASE_URL;
   const imageURL = ["/8bitpix.png", "/personalPhoto2.png", "/claymation.png"];
   const pixelationKeyframes = {
@@ -23,14 +25,14 @@ function Photo() {
         initial="initial"
         animate="animate"
         variants={pixelationKeyframes}
-        transition={{ duration: 2, ease: "easeInOut", delay: 2 }}
+        transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
       >
         <div className="w-[298px] h-[298px] lg:w-[450px] lg:h-[450px] mix-blend-lighten bg-accent rounded-full">
           <motion.div
             initial="initial"
             animate="animate"
             variants={pixelationKeyframes}
-            transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
+            transition={{ duration: 1, ease: "easeInOut", delay: 0.5 }}
           >
             <Carousel
               plugins={[plugin.current]}

@@ -2,6 +2,7 @@ import Photo from "@/components/Photo";
 import Social from "@/components/Social";
 import TitleTransition from "@/components/TitleTransition";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const titles = [
@@ -65,10 +66,14 @@ const Home = () => {
                           </li>
                         </ul>
                         <br />
-                        <p>
-                          Click <span className="text-primary">HERE</span> to
-                          view my journey!
-                        </p>
+                        <span>Click </span>
+                        <Link
+                          to="/resume"
+                          className="text-primary hover:border-b-2 border-primary"
+                        >
+                          HERE
+                        </Link>
+                        <span> to view my journey!</span>
                         <div className="flex items-center">
                           <p className="text-primary items-center">&gt;</p>
                           <motion.div
