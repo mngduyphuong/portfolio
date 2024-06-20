@@ -1,77 +1,107 @@
+import { motion } from "framer-motion";
+import { Button } from "./ui/button";
+
 function Career() {
+  const basePath = import.meta.env.BASE_URL;
   return (
     <div>
-      <ul className="timeline timeline-vertical lg:timeline-horizontal">
+      <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
         <li>
-          <div className="timeline-start">1984</div>
           <div className="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="w-5 h-5"
+            <motion.div
+              animate={{
+                x: [0, -10, 10, -10, 10, 0], // shaking animation on the x-axis
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 5,
+                ease: "easeInOut",
+                delay: 3.5,
+                repeatDelay: 2,
+              }}
+              className=" h-8 w-8"
             >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clipRule="evenodd"
-              />
-            </svg>
+              <img src={`${basePath}` + "/rabit.svg"} className=" h-8 w-8" />
+            </motion.div>
           </div>
-          <div className="timeline-end timeline-box">
-            First Macintosh computer
+          <div className="timeline-start md:text-end mb-10 p-2">
+            <time className="font-semibold ">Sep 2022 - Jan 2024</time>
+            <div className="font-bold text-lg text-primary">
+              Application Support Officer
+            </div>
+            Gradient Information Systems <br />
           </div>
           <hr />
         </li>
         <li>
           <hr />
-          <div className="timeline-end">1998</div>
           <div className="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="w-5 h-5"
+            <motion.div
+              animate={{
+                y: [0, -10, 10, -10, 10, 0], // shaking animation on the x-axis
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 5,
+                ease: "easeInOut",
+                delay: 2,
+                repeatDelay: 2,
+              }}
+              className=" h-8 w-8"
             >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clipRule="evenodd"
-              />
-            </svg>
+              <img src={`${basePath}` + "/monster.svg"} className=" h-8 w-8" />
+            </motion.div>
           </div>
-          <div className="timeline-start timeline-box">iMac</div>
+          <div className="timeline-end md:text-end mb-5 md:mb-10 p-2">
+            <time className="font-semibold ">Jul 2021 - Jan 2022</time>
+            <div className="font-bold text-lg text-primary">
+              Front End Developer
+            </div>
+            AgileTech VN
+          </div>
           <hr />
         </li>
-
         <li>
           <hr />
-          <div className="timeline-end">1998</div>
-          <div className="timeline-middle"></div>
-          <div className="timeline-start timeline-box">iMac</div>
-          <hr />
-        </li>
-
-        <li>
-          <hr />
-          <div className="timeline-start">2015</div>
           <div className="timeline-middle">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="w-5 h-5"
+            <motion.div
+              animate={{
+                x: [0, -10, 10, -10, 10, 0], // shaking animation on the x-axis
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 5,
+                ease: "easeInOut",
+                delay: 5,
+                repeatDelay: 2,
+              }}
+              className=" h-8 w-8"
             >
-              <path
-                fillRule="evenodd"
-                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                clipRule="evenodd"
-              />
-            </svg>
+              <img src={`${basePath}` + "/donut.svg"} className=" h-8 w-8" />
+            </motion.div>
           </div>
-          <div className="timeline-end timeline-box">Apple Watch</div>
+          <div className="timeline-start md:text-end mb-10 p-2">
+            <time className="font-semibold ">Nov 2022 - Feb 2021</time>
+            <div className="font-bold text-lg text-primary">
+              Software Engineer Intern
+            </div>
+            Yoctonab Data Integration Solution <br />
+          </div>
         </li>
       </ul>
+
+      <div className="mt-10 text-center">
+        <p className="font-bold">Dive into the details?!</p>
+        <br />
+        <Button>
+          <a
+            target="_blank"
+            href="https://drive.google.com/file/d/1z5DQo8qnkM7yNcKU0Myv-uPfLIlTKIGR/view?usp=sharing"
+          >
+            Unlock My Resume
+          </a>
+        </Button>
+      </div>
     </div>
   );
 }

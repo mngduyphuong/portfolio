@@ -1,16 +1,21 @@
+import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-// import {
-//   Tooltip,
-//   TooltipContent,
-//   TooltipProvider,
-//   TooltipTrigger,
-// } from "@/components/ui/tooltip";
 
-// import { ScrollArea } from "@/components/ui/scroll-area";
-import { easeIn, motion } from "framer-motion";
+import { easeIn, motion, AnimatePresence } from "framer-motion";
 import Career from "@/components/Career";
+import Education from "@/components/Education";
 
 function Resume() {
+  const [activeTab, setActiveTab] = useState("career");
+
+  const handleTabChange = (newValue: string) => {
+    setActiveTab(newValue);
+  };
+
+  const variants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
   return (
     <>
       <section className="h-full">
@@ -22,6 +27,8 @@ function Resume() {
           <Tabs
             className="flex flex-col lg:flex-row gap-[60px] pt-2 lg:pt-8 pb-6 lg:pb-18"
             defaultValue="career"
+            value={activeTab}
+            onValueChange={handleTabChange}
           >
             <TabsList className="flex flex-col w-full max-w-[380px] mx-auto lg:mx-0 gap-6">
               <TabsTrigger value="career">Career</TabsTrigger>
@@ -29,15 +36,50 @@ function Resume() {
               <TabsTrigger value="skills">Skills</TabsTrigger>
             </TabsList>
 
-            <TabsContent value="career" className="w-full">
-              <Career></Career>
-            </TabsContent>
-            <TabsContent value="education" className="w-full">
-              education
-            </TabsContent>
-            <TabsContent value="skills" className="w-full">
-              skills
-            </TabsContent>
+            <AnimatePresence>
+              {activeTab === "career" && (
+                <motion.div
+                  key="career"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={variants}
+                  transition={{ duration: 0.3 }}
+                >
+                  <TabsContent value="career" className="w-full">
+                    <Career />
+                  </TabsContent>
+                </motion.div>
+              )}
+              {activeTab === "education" && (
+                <motion.div
+                  key="education"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={variants}
+                  transition={{ duration: 0.3 }}
+                >
+                  <TabsContent value="education" className="w-full">
+                    <Education></Education>
+                  </TabsContent>
+                </motion.div>
+              )}
+              {activeTab === "skills" && (
+                <motion.div
+                  key="skills"
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={variants}
+                  transition={{ duration: 0.3 }}
+                >
+                  <TabsContent value="skills" className="w-full">
+                    Skills
+                  </TabsContent>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </Tabs>
         </motion.div>
       </section>

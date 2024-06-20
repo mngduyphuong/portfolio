@@ -16,7 +16,7 @@ const Home = () => {
   return (
     <>
       <section className="h-full">
-        <div className="container mx-auto h-full">
+        <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center justify-between pt-2 lg:pt-8 pb-6 lg:pb-18">
             <div className="order-2 lg:order-none text-left border-x-2 border-dashed border-primary lg:w-2/5">
               <div className="px-4 border-y-2 border-primary">
