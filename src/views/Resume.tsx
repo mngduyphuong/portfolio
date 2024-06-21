@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { easeIn, motion, AnimatePresence } from "framer-motion";
 import Career from "@/components/Career";
 import Education from "@/components/Education";
+import Skills from "@/components/Skills";
 
 function Resume() {
   const [activeTab, setActiveTab] = useState("career");
@@ -22,7 +23,7 @@ function Resume() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { delay: 1.5, ease: easeIn } }}
-          className="container mx-auto h-full"
+          className="container mx-auto h-full w-full"
         >
           <Tabs
             className="flex flex-col lg:flex-row gap-[60px] pt-2 lg:pt-8 pb-6 lg:pb-18"
@@ -44,9 +45,10 @@ function Resume() {
                   animate="visible"
                   exit="exit"
                   variants={variants}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 1 }}
+                  className="w-full"
                 >
-                  <TabsContent value="career" className="w-full">
+                  <TabsContent value="career">
                     <Career />
                   </TabsContent>
                 </motion.div>
@@ -58,9 +60,10 @@ function Resume() {
                   animate="visible"
                   exit="exit"
                   variants={variants}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 1 }}
+                  className="w-full"
                 >
-                  <TabsContent value="education" className="w-full">
+                  <TabsContent value="education">
                     <Education></Education>
                   </TabsContent>
                 </motion.div>
@@ -72,10 +75,11 @@ function Resume() {
                   animate="visible"
                   exit="exit"
                   variants={variants}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 1 }}
+                  className="w-full"
                 >
-                  <TabsContent value="skills" className="w-full">
-                    Skills
+                  <TabsContent value="skills">
+                    <Skills />
                   </TabsContent>
                 </motion.div>
               )}

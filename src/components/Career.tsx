@@ -16,7 +16,7 @@ function Career() {
                 repeat: Infinity,
                 duration: 5,
                 ease: "easeInOut",
-                delay: 3.5,
+                delay: 1.5,
                 repeatDelay: 2,
               }}
               className=" h-8 w-8"
@@ -33,8 +33,16 @@ function Career() {
           </div>
           <hr />
         </li>
-        <li>
-          <hr />
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          transition={{ duration: 1, delay: 1.5 }}
+        >
           <div className="timeline-middle">
             <motion.div
               animate={{
@@ -44,8 +52,8 @@ function Career() {
                 repeat: Infinity,
                 duration: 5,
                 ease: "easeInOut",
-                delay: 2,
                 repeatDelay: 2,
+                delay: 3,
               }}
               className=" h-8 w-8"
             >
@@ -60,9 +68,17 @@ function Career() {
             AgileTech VN
           </div>
           <hr />
-        </li>
-        <li>
-          <hr />
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          transition={{ duration: 1, delay: 3 }}
+        >
           <div className="timeline-middle">
             <motion.div
               animate={{
@@ -72,8 +88,8 @@ function Career() {
                 repeat: Infinity,
                 duration: 5,
                 ease: "easeInOut",
-                delay: 5,
                 repeatDelay: 2,
+                delay: 4,
               }}
               className=" h-8 w-8"
             >
@@ -87,21 +103,32 @@ function Career() {
             </div>
             Yoctonab Data Integration Solution <br />
           </div>
-        </li>
+        </motion.li>
       </ul>
 
-      <div className="mt-10 text-center">
-        <p className="font-bold">Dive into the details?!</p>
-        <br />
-        <Button>
-          <a
-            target="_blank"
-            href="https://drive.google.com/file/d/1z5DQo8qnkM7yNcKU0Myv-uPfLIlTKIGR/view?usp=sharing"
-          >
-            Unlock My Resume
-          </a>
-        </Button>
-      </div>
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        transition={{ duration: 1, delay: 4 }}
+      >
+        <div className="mt-10 text-center">
+          <p className="font-bold">Dive into the details?!</p>
+          <br />
+          <Button>
+            <a
+              target="_blank"
+              href="https://drive.google.com/file/d/1z5DQo8qnkM7yNcKU0Myv-uPfLIlTKIGR/view?usp=sharing"
+            >
+              Unlock My Resume
+            </a>
+          </Button>
+        </div>
+      </motion.div>
     </div>
   );
 }
