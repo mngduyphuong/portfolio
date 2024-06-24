@@ -25,7 +25,7 @@ const imageURL = [
 ];
 const projects = [
   {
-    num: "01",
+    num: "1",
     category: "fullstack",
     title: "2esystem - CRUD aviation system",
     description:
@@ -42,7 +42,7 @@ const projects = [
     github: "https://github.com/mngduyphuong/2eSystem",
   },
   {
-    num: "02",
+    num: "2",
     category: "frontend",
     title: "React personal portfolio",
     description:
@@ -52,7 +52,7 @@ const projects = [
     github: "https://github.com/mngduyphuong/portfolio",
   },
   {
-    num: "03",
+    num: "3",
     category: "frontend",
     title: "USKU delivery service",
     description:
@@ -62,7 +62,7 @@ const projects = [
     github: "https://github.com/mngduyphuong/USKU-Frontend",
   },
   {
-    num: "04",
+    num: "4",
     category: "frontend",
     title: "Weather app",
     description:
@@ -93,7 +93,7 @@ function Projects() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
-      className="min-h-[80vh] flex flex-col justify-center py-12 lg:px-0"
+      className=" flex flex-col justify-center py-12 lg:px-0"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row lg:gap-[30px]">
@@ -104,13 +104,13 @@ function Projects() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
-                className="lg:absolute lg:w-full"
+                className="lg:absolute lg:w-full mt-10 lg:mt-0"
               >
                 <div className="flex flex-col gap-[30px] h-[50%]">
-                  <div className="mt-2 lg:mt-0 text-6xl leading-none font-extrabold text-primary">
-                    Project {project.num}
+                  <div className="mt-2 lg:mt-0 text-4xl leading-none font-extrabold text-primary">
+                    Project {project.num}/4
                   </div>
-                  <h2 className="text-4xl font-bold leading-none group-hover:text-primary transition-all duration-500 capitalize">
+                  <h2 className="text-xl font-bold leading-none group-hover:text-primary transition-all duration-500 capitalize">
                     {project.category} project
                   </h2>
                   <p className="text-slate-400">{project.description}</p>
