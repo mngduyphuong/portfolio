@@ -47,7 +47,7 @@ const TitleTransition: React.FC<{ text: any }> = ({ text }) => {
           marginLeft: "5px",
           backgroundColor: "green",
         }}
-        className="inline-block w-2.5 h-8 ml-2 mt-2"
+        className="inline-block w-2.5 h-8 ml-2 mt-1 md:mt-2"
       />
     </motion.div>
   );

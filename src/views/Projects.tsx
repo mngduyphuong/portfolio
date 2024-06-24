@@ -1,5 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import Autoplay from "embla-carousel-autoplay";
+import { BiGame } from "react-icons/bi";
+import { SiGamebanana, SiWegame, SiGamejolt } from "react-icons/si";
+import { GiAncientSword } from "react-icons/gi";
 import {
   Carousel,
   CarouselContent,
@@ -13,7 +16,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-
 import { motion, AnimatePresence } from "framer-motion";
 
 const basePath = import.meta.env.BASE_URL;
@@ -40,16 +42,18 @@ const projects = [
     ],
     live: "https://twoesystem-fe.onrender.com/",
     github: "https://github.com/mngduyphuong/2eSystem",
+    symbol: <SiGamejolt />,
   },
   {
     num: "2",
     category: "frontend",
     title: "React personal portfolio",
     description:
-      "A static website contains my personal portfolio designed with an 8-bit game theme. It showcases my skills, projects, and experience in a retro-style interface.",
+      "A static website contains my personal portfolio designed with an 8-bit game theme and a retro-style interface.",
     stack: ["React", "Typescript"],
     live: "https://mngduyphuong.github.io/portfolio/",
     github: "https://github.com/mngduyphuong/portfolio",
+    symbol: <SiGamebanana />,
   },
   {
     num: "3",
@@ -60,6 +64,7 @@ const projects = [
     stack: ["Nuxt.Js", "Axios", "Vuetify"],
     live: "https://mngduyphuong.github.io/USKU-Frontend/",
     github: "https://github.com/mngduyphuong/USKU-Frontend",
+    symbol: <SiWegame />,
   },
   {
     num: "4",
@@ -70,6 +75,7 @@ const projects = [
     stack: ["Vue.Js 2", "Axios"],
     live: "https://mngduyphuong.github.io/Vue-weather-app/",
     github: "https://github.com/mngduyphuong/Vue-weather-app",
+    symbol: <BiGame />,
   },
 ];
 
@@ -86,7 +92,7 @@ function Projects() {
   }, [api]);
 
   const plugin = useRef(
-    Autoplay({ delay: 10000, stopOnInteraction: false, stopOnFocusIn: false })
+    Autoplay({ delay: 7000, stopOnInteraction: false, stopOnFocusIn: false })
   );
   return (
     <motion.div
@@ -107,11 +113,13 @@ function Projects() {
                 className="lg:absolute lg:w-full mt-10 lg:mt-0"
               >
                 <div className="flex flex-col gap-[30px] h-[50%]">
-                  <div className="mt-2 lg:mt-0 text-4xl leading-none font-extrabold text-primary">
-                    Project {project.num}/4
+                  <div className="flex gap-[16px] mt-2 lg:mt-0 text-4xl leading-none font-extrabold text-primary">
+                    <p> Project {project.num}/4</p> {project.symbol}
                   </div>
-                  <h2 className="text-xl font-bold leading-none group-hover:text-primary transition-all duration-500 capitalize">
-                    {project.category} project
+                  <h2 className="flex gap-[16px] text-xl font-bold leading-none group-hover:text-primary transition-all duration-500 capitalize">
+                    <GiAncientSword className="text-primary" />{" "}
+                    {project.category} quest{" "}
+                    <GiAncientSword className="text-primary" />
                   </h2>
                   <p className="text-slate-400">{project.description}</p>
                   <ul className="flex gap-4 flex-wrap">
