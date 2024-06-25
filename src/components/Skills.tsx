@@ -30,6 +30,7 @@ import {
   SiTailwindcss,
   SiVisualbasic,
   SiVuetify,
+  SiTypescript,
 } from "react-icons/si";
 import { VscSourceControl } from "react-icons/vsc";
 import {
@@ -46,6 +47,7 @@ function Skills() {
     { icon: <FaSass />, name: "SASS", type: "Language" },
     { icon: <FaCss3 />, name: "CSS 3", type: "Language" },
     { icon: <FaJs />, name: "Javascript", type: "Language" },
+    { icon: <SiTypescript />, name: "Typescript", type: "Language" },
     { icon: <SiVisualbasic />, name: "Visual Basic", type: "Language" },
     { icon: <SiCsharp />, name: "C#", type: "Language" },
     { icon: <SiCplusplus />, name: "C++", type: "Language" },
