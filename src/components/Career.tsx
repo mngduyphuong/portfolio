@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 function Career() {
   const basePath = import.meta.env.BASE_URL;
@@ -118,8 +119,11 @@ function Career() {
       >
         <div className="mt-10 text-center">
           <p className="font-bold">Dive into the details?!</p>
+          <Button className="mt-2">
+            <Link to="/projects">View my achievements</Link>
+          </Button>
           <br />
-          <Button>
+          <Button className="mt-2">
             <a
               target="_blank"
               href="https://drive.google.com/file/d/1z5DQo8qnkM7yNcKU0Myv-uPfLIlTKIGR/view?usp=sharing"
