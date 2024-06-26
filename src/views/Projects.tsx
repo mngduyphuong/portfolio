@@ -28,7 +28,7 @@ const imageURL = [
 const projects = [
   {
     num: "1",
-    category: "fullstack",
+    category: "full stack",
     title: "2esystem - CRUD aviation system",
     description:
       "A fully responsive CRUD web application for managing airports and airlines",
@@ -46,7 +46,7 @@ const projects = [
   },
   {
     num: "2",
-    category: "frontend",
+    category: "front end",
     title: "React personal portfolio",
     description:
       "A static website contains my personal portfolio designed with an 8-bit game theme and a retro-style interface.",
@@ -57,10 +57,10 @@ const projects = [
   },
   {
     num: "3",
-    category: "frontend",
+    category: "front end",
     title: "USKU delivery service",
     description:
-      "Developed the web interface for a data analytics system as the sole Frontend Developer in a team of six students. This repository highlights my frontend work, minus databases and dynamic data",
+      "Developed the web interface for a data analytics system as the sole Front End Developer in a team of six students. This repository highlights my frontend work, minus databases and dynamic data",
     stack: ["Nuxt.Js", "Axios", "Vuetify"],
     live: "https://mngduyphuong.github.io/USKU-Frontend/",
     github: "https://github.com/mngduyphuong/USKU-Frontend",
@@ -68,7 +68,7 @@ const projects = [
   },
   {
     num: "4",
-    category: "frontend",
+    category: "front end",
     title: "Weather app",
     description:
       "A simple Weather app in Vue.Js, we use the Open Weather Map API to make calls to a restful api to return the current weather data",
