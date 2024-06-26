@@ -31,7 +31,7 @@ const projects = [
     category: "fullstack",
     title: "2esystem - CRUD aviation system",
     description:
-      "A fully responsive CRUD web application for managing airports and airline",
+      "A fully responsive CRUD web application for managing airports and airlines",
     stack: [
       "Vue.Js 2",
       "Boostrap",

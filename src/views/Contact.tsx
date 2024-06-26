@@ -35,8 +35,8 @@ function Contact() {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-[30px]">
           <div className=" lg:h-[54%] order-2 lg:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-accent rounded-xl">
-              <div className="flex text-2xl lg:text-3xl text-primary gap-2 items-center">
+            <form className="flex flex-col gap-6 px-6 lg:px-10 py-6 lg:py-10 bg-accent rounded-xl">
+              <div className="flex text-xl font-semibold lg:text-3xl text-primary gap-2 items-center">
                 <p>Start Your Adventure!</p>
                 <motion.div
                   animate={{ rotate: 360 }}
@@ -66,8 +66,8 @@ function Contact() {
                       <div className="text-[28px]">{item.icon}</div>
                     </div>
                     <div>
-                      <p>{item.title}</p>
-                      <h3>{item.detail}</h3>
+                      <p className="font-bold text-lg">{item.title}</p>
+                      <p>{item.detail}</p>
                     </div>
                   </li>
                 );
