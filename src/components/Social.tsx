@@ -15,7 +15,12 @@ const Social: React.FC<{ containerStyles: string; iconStyles: string }> = ({
     <div className={containerStyles}>
       {socials.map((social, index) => {
         return (
-          <Link key={index} to={social.path} className={iconStyles}>
+          <Link
+            key={index}
+            to={social.path}
+            className={iconStyles}
+            target="_blank"
+          >
             {social.icon}
           </Link>
         );

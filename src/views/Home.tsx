@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const titles = [
     "Portfolio",
-    "Fullstack Dev",
+    "Full Stack Dev",
     "Digital Dynamo",
     "Web Dev",
     "Tech Savvy",
@@ -35,13 +35,19 @@ const Home = () => {
                       <div>
                         <p>Welcome to the Digital Frontier!</p>
                         <br />
+                        <p className="text-pretty">
+                          I'm a Software Engineer passionate about coding,
+                          creativity and eager to enhance my skills by building
+                          dynamic web apps and solving challenging problems.
+                        </p>
+                        <br />
                         <ul>
                           <li className="flex">
                             <span className="font-semibold text-primary w-24">
                               User:
                             </span>
                             <span className="flex-auto">
-                              Junior Fullstack Dev
+                              Junior Full Stack Dev
                             </span>
                           </li>
                           <li className="flex">
