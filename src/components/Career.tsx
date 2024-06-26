@@ -47,7 +47,7 @@ function Career() {
           <div className="timeline-middle">
             <motion.div
               animate={{
-                y: [0, -10, 10, -10, 10, 0], // shaking animation on the x-axis
+                y: [0, -10, 10, -10, 10, 0], // shaking animation on the y-axis
               }}
               transition={{
                 repeat: Infinity,

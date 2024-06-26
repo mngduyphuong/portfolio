@@ -37,7 +37,7 @@ const projects = [
       "Boostrap",
       "PostgreSQL",
       "Axios",
-      "Express.JS",
+      "Express.Js",
       "Google Map API",
     ],
     live: "https://twoesystem-fe.onrender.com/",
@@ -50,7 +50,7 @@ const projects = [
     title: "React personal portfolio",
     description:
       "A static website contains my personal portfolio designed with an 8-bit game theme and a retro-style interface.",
-    stack: ["React", "Typescript"],
+    stack: ["React", "Typescript", "Tailwind CSS"],
     live: "https://mngduyphuong.github.io/portfolio/",
     github: "https://github.com/mngduyphuong/portfolio",
     symbol: <SiGamebanana />,
@@ -71,7 +71,7 @@ const projects = [
     category: "frontend",
     title: "Weather app",
     description:
-      "A simple Weather app in Vue JS, we use the Open Weather Map API to make calls to a restful api to return the current weather data",
+      "A simple Weather app in Vue.Js, we use the Open Weather Map API to make calls to a restful api to return the current weather data",
     stack: ["Vue.Js 2", "Axios"],
     live: "https://mngduyphuong.github.io/Vue-weather-app/",
     github: "https://github.com/mngduyphuong/Vue-weather-app",
