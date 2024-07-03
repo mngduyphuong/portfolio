@@ -7,6 +7,8 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
@@ -88,6 +90,7 @@ function Projects() {
     }
     api.on("select", () => {
       setProject(projects[api.selectedScrollSnap()]);
+      plugin.current.reset();
     });
   }, [api]);
 
@@ -95,98 +98,99 @@ function Projects() {
     Autoplay({ delay: 7000, stopOnInteraction: false, stopOnFocusIn: false })
   );
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
-      className=" flex flex-col justify-center py-12 lg:px-0"
-    >
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row lg:gap-[30px]">
-          <div className="w-full lg:w-[50%] lg:h-[460px] flex flex-col lg:justify-between order-2 lg:order-none relative">
-            <AnimatePresence>
-              <motion.div
-                key={project.num}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1, ease: "easeInOut" }}
-                className="lg:absolute lg:w-full mt-10 lg:mt-0"
-              >
-                <div className="flex flex-col gap-[30px] h-[50%]">
-                  <div className="flex gap-[16px] mt-2 lg:mt-0 text-4xl leading-none font-extrabold text-primary">
-                    <p> Project {project.num}/4</p> {project.symbol}
-                  </div>
-                  <h2 className="flex gap-[16px] text-xl font-bold leading-none group-hover:text-primary transition-all duration-500 capitalize">
-                    <GiAncientSword className="text-primary" />{" "}
-                    {project.category} quest{" "}
-                    <GiAncientSword className="text-primary" />
-                  </h2>
-                  <p className="text-slate-400">{project.description}</p>
-                  <ul className="flex gap-4 flex-wrap">
-                    {project.stack.map((item: string, index: number) => {
-                      return (
-                        <li key={index} className=" text-primary">
-                          {item} {index !== project.stack.length - 1 && ","}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                  <div className="border border-white/20"></div>
-                  <div className="flex items-center gap-4">
-                    <a target="_blank" href={project.live}>
-                      <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger className="w-[40px] h-[40px] rounded-full bg-accent flex justify-center items-center group">
-                            <BsArrowUpRight className="group-hover:text-primary"></BsArrowUpRight>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p>Live Project</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </a>
-                    <a target="_blank" href={project.github}>
-                      <TooltipProvider>
-                        <Tooltip>
-                          <TooltipTrigger className="w-[48px] h-[48px] rounded-full bg-accent flex justify-center items-center group">
-                            <BsGithub className="group-hover:text-primary"></BsGithub>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p>Live Project</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </TooltipProvider>
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-          <div className="w-full lg:w-[50%]">
-            <Carousel
-              plugins={[plugin.current]}
-              className="w-full h-auto"
-              setApi={setApi}
-            >
-              <CarouselContent>
-                {Array.from({ length: 4 }).map((_, index) => (
-                  <CarouselItem key={index}>
-                    <div className="lg:h-[480px] relative group flex justify-center items-center">
-                      <div>
-                        <img
-                          src={`${basePath}/${imageURL[index]}`}
-                          className="object-cover"
-                        />
-                      </div>
+    <Carousel plugins={[plugin.current]} setApi={setApi}>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, ease: "easeInOut", delay: 1 }}
+        className=" flex flex-col justify-center py-12 lg:px-0"
+      >
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row lg:gap-[30px]">
+            <div className="w-full lg:w-[50%] lg:h-[460px] flex flex-col lg:justify-between order-2 lg:order-none relative">
+              <AnimatePresence>
+                <motion.div
+                  key={project.num}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className="lg:absolute lg:w-full mt-10 lg:mt-0"
+                >
+                  <div className="flex flex-col gap-[30px] h-[50%]">
+                    <div className="flex gap-[10px] text-4xl mt-2 lg:mt-0  leading-none font-bold text-primary">
+                      <CarouselPrevious />
+                      <p>Quest {project.num}/4</p>
+                      {project.symbol}
+                      <CarouselNext />
                     </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-            </Carousel>
+                    <h2 className="flex gap-[16px] text-xl font-bold leading-none group-hover:text-primary transition-all duration-500 capitalize">
+                      <GiAncientSword className="text-primary" />{" "}
+                      {project.category} adventure
+                      <GiAncientSword className="text-primary" />
+                    </h2>
+                    <p className="text-slate-400">{project.description}</p>
+                    <ul className="flex gap-4 flex-wrap">
+                      {project.stack.map((item: string, index: number) => {
+                        return (
+                          <li key={index} className=" text-primary">
+                            {item} {index !== project.stack.length - 1 && ","}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                    <div className="border border-white/20"></div>
+                    <div className="flex items-center gap-4">
+                      <a target="_blank" href={project.live}>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger className="w-[40px] h-[40px] rounded-full bg-accent flex justify-center items-center group">
+                              <BsArrowUpRight className="group-hover:text-primary"></BsArrowUpRight>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Live Project</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </a>
+                      <a target="_blank" href={project.github}>
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger className="w-[48px] h-[48px] rounded-full bg-accent flex justify-center items-center group">
+                              <BsGithub className="group-hover:text-primary"></BsGithub>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>Live Project</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+            <div className="w-full lg:w-[50%]">
+              <div className="w-full h-auto">
+                <CarouselContent>
+                  {Array.from({ length: 4 }).map((_, index) => (
+                    <CarouselItem key={index}>
+                      <div className="lg:h-[480px] relative group flex justify-center items-center">
+                        <div>
+                          <img
+                            src={`${basePath}/${imageURL[index]}`}
+                            className="object-cover"
+                          />
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </Carousel>
   );
 }
 
