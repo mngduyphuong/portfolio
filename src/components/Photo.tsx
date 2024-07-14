@@ -45,7 +45,7 @@ function Photo() {
                   <CarouselItem key={index}>
                     <img
                       src={`${basePath}${imageURL[index]}`}
-                      alt="Phuong Nguyen"
+                      alt="Andrew Nguyen"
                       className="w-full h-auto"
                     />
                   </CarouselItem>

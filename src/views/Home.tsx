@@ -28,7 +28,7 @@ const Home = () => {
                         1999 Bytes available
                       </p>
                       <h1 className="text-3xl lg:text-4xl mb-6 mt-2 font-bold">
-                        <p>Phuong Nguyen</p>
+                        <p>Andrew Nguyen</p>
                         <TitleTransition text={titles}></TitleTransition>
                         <p className="text-primary"></p>
                       </h1>
