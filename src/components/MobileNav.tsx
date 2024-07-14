@@ -37,7 +37,7 @@ function MobileNav() {
         </SheetTrigger>
         <SheetContent className="flex flex-col items-center gap-8">
           <h1 className="text-xl font-semibold py-12">
-            Phuong
+            Andrew
             <span className="text-primary"> &lt;&#47;&gt;</span>
           </h1>
           {links.map((link) => (

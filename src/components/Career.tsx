@@ -126,7 +126,7 @@ function Career() {
           <Button className="mt-2">
             <a
               target="_blank"
-              href="https://drive.google.com/file/d/1BiWb9PFTySMEI6uvibt8sUVEjotiz372/view?usp=sharing"
+              href="https://drive.google.com/file/d/1jq8__DiJytJazfH_nruKklFBRT4C4gF7/view?usp=sharing"
             >
               Unlock My Resume
             </a>
