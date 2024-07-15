@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 function Career() {
   const basePath = import.meta.env.BASE_URL;
+  const resumeURL = import.meta.env.VITE_RESUME_URL;
   return (
     <div>
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
@@ -124,10 +125,7 @@ function Career() {
           </Button>
           <br />
           <Button className="mt-2">
-            <a
-              target="_blank"
-              href="https://drive.google.com/file/d/1jq8__DiJytJazfH_nruKklFBRT4C4gF7/view?usp=sharing"
-            >
+            <a target="_blank" href={resumeURL}>
               Unlock My Resume
             </a>
           </Button>
