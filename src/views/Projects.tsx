@@ -3,6 +3,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { BiGame } from "react-icons/bi";
 import { SiGamebanana, SiWegame, SiGamejolt } from "react-icons/si";
 import { GiAncientSword } from "react-icons/gi";
+import { FaMintbit } from "react-icons/fa6";
 import {
   Carousel,
   CarouselContent,
@@ -26,6 +27,7 @@ const imageURL = [
   "project2.jpg",
   "project3.jpg",
   "project4.jpg",
+  "project5.jpg",
 ];
 const projects = [
   {
@@ -59,6 +61,17 @@ const projects = [
   },
   {
     num: "3",
+    category: "back end",
+    title: "Java Weather App",
+    description:
+      "A backend-only Spring Boot application that fetches real-time weather data from the OpenWeatherMap API and provides REST endpoints for access. It includes CI/CD to AWS EC2 and ensures the security of API and AWS keys.",
+    stack: ["Java", "Spring Boot", "AWS EC2", "OpenWeatherMap API"],
+    live: "http://ec2-3-106-189-38.ap-southeast-2.compute.amazonaws.com:8080/weather?location=melbourne,au",
+    github: "https://github.com/mngduyphuong/weather-java",
+    symbol: <FaMintbit />,
+  },
+  {
+    num: "4",
     category: "front end",
     title: "USKU delivery service",
     description:
@@ -69,12 +82,12 @@ const projects = [
     symbol: <SiWegame />,
   },
   {
-    num: "4",
+    num: "5",
     category: "front end",
     title: "Weather app",
     description:
       "A simple Weather app in Vue.Js, we use the Open Weather Map API to make calls to a restful api to return the current weather data",
-    stack: ["Vue.Js 2", "Axios"],
+    stack: ["Vue.Js 2", "Axios", "OpenWeatherMap API"],
     live: "https://mngduyphuong.github.io/Vue-weather-app/",
     github: "https://github.com/mngduyphuong/Vue-weather-app",
     symbol: <BiGame />,
@@ -119,7 +132,7 @@ function Projects() {
                   <div className="flex flex-col gap-[30px] h-[50%]">
                     <div className="flex gap-[10px] text-4xl mt-2 lg:mt-0  leading-none font-bold text-primary">
                       <CarouselPrevious />
-                      <p>Quest {project.num}/4</p>
+                      <p>Quest {project.num}/5</p>
                       {project.symbol}
                       <CarouselNext />
                     </div>
@@ -172,7 +185,7 @@ function Projects() {
             <div className="w-full lg:w-[50%]">
               <div className="w-full h-auto">
                 <CarouselContent>
-                  {Array.from({ length: 4 }).map((_, index) => (
+                  {Array.from({ length: 5 }).map((_, index) => (
                     <CarouselItem key={index}>
                       <div className="lg:h-[480px] relative group flex justify-center items-center">
                         <div>

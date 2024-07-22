@@ -11,6 +11,9 @@ import {
   FaSass,
   FaSlack,
   FaVuejs,
+  FaJava,
+  FaAws,
+  FaJira,
 } from "react-icons/fa";
 import {
   SiAntdesign,
@@ -31,6 +34,8 @@ import {
   SiVisualbasic,
   SiVuetify,
   SiTypescript,
+  SiSpringboot,
+  SiDotnet,
 } from "react-icons/si";
 import { VscSourceControl } from "react-icons/vsc";
 import {
@@ -48,6 +53,7 @@ function Skills() {
     { icon: <FaCss3 />, name: "CSS 3", type: "Language" },
     { icon: <FaJs />, name: "Javascript", type: "Language" },
     { icon: <SiTypescript />, name: "Typescript", type: "Language" },
+    { icon: <FaJava />, name: "Java", type: "Language" },
     { icon: <SiVisualbasic />, name: "Visual Basic", type: "Language" },
     { icon: <SiCsharp />, name: "C#", type: "Language" },
     { icon: <SiCplusplus />, name: "C++", type: "Language" },
@@ -55,9 +61,11 @@ function Skills() {
 
     // Frameworks & Libraries
     { icon: <FaNode />, name: "Node Js", type: "Framework" },
-    { icon: <SiNuxtdotjs />, name: "Nuxt Js", type: "Framework" },
     { icon: <FaReact />, name: "React Js", type: "Framework" },
     { icon: <FaVuejs />, name: "Vue Js", type: "Framework" },
+    { icon: <SiDotnet />, name: ".Net", type: "Framework" },
+    { icon: <SiSpringboot />, name: "Spring Boot", type: "Framework" },
+    { icon: <SiNuxtdotjs />, name: "Nuxt Js", type: "Framework" },
 
     // Databases
     { icon: <SiMicrosoftsqlserver />, name: "Microsoft SQL", type: "Database" },
@@ -80,8 +88,10 @@ function Skills() {
       name: "Microsoft Azure Functions",
       type: "Tool",
     },
+    { icon: <FaAws />, name: "Amazon Web Services", type: "Tool" },
     { icon: <VscSourceControl />, name: "Source Control", type: "Tool" },
     { icon: <FaSlack />, name: "Slack", type: "Tool" },
+    { icon: <FaJira />, name: "Jira", type: "Tool" },
     { icon: <FaDocker />, name: "Docker", type: "Tool" },
     { icon: <SiMicrosoftteams />, name: "Microsoft Team", type: "Tool" },
     { icon: <FaGitAlt />, name: "Git", type: "Tool" },
