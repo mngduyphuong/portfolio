@@ -3,6 +3,9 @@ import {
   SheetContent,
   SheetTrigger,
   SheetClose,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
 } from "@/components/ui/sheet";
 import { Link, useLocation } from "react-router-dom";
 import { CiMenuFries } from "react-icons/ci";
@@ -32,6 +35,10 @@ function MobileNav() {
   return (
     <>
       <Sheet>
+        <SheetHeader>
+          <SheetTitle></SheetTitle>
+          <SheetDescription></SheetDescription>
+        </SheetHeader>
         <SheetTrigger className="flex justify-center items-center">
           <CiMenuFries className="text-[32px] text-primary"></CiMenuFries>
         </SheetTrigger>
