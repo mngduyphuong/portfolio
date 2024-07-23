@@ -54,7 +54,7 @@ const projects = [
     title: "React personal portfolio",
     description:
       "A static website contains my personal portfolio designed with an 8-bit game theme and a retro-style interface.",
-    stack: ["React", "Typescript", "Tailwind CSS"],
+    stack: ["React", "Typescript", "Tailwind CSS", "Framer Motion"],
     live: "https://mngduyphuong.github.io/portfolio/",
     github: "https://github.com/mngduyphuong/portfolio",
     symbol: <SiGamebanana />,
@@ -64,7 +64,7 @@ const projects = [
     category: "back end",
     title: "Java Weather App",
     description:
-      "A backend-only Spring Boot application that fetches real-time weather data from the OpenWeatherMap API and provides REST endpoints for access. It includes CI/CD to AWS EC2 and ensures the security of API and AWS keys.",
+      "A backend-only Spring Boot application that fetches real-time weather data from the OpenWeatherMap API, provides REST endpoints for access, and includes CI/CD pipelines to AWS EC2.",
     stack: ["Java", "Spring Boot", "AWS EC2", "OpenWeatherMap API"],
     live: "http://ec2-3-106-189-38.ap-southeast-2.compute.amazonaws.com:8080/weather?location=melbourne,au",
     github: "https://github.com/mngduyphuong/weather-java",
@@ -75,7 +75,7 @@ const projects = [
     category: "front end",
     title: "USKU delivery service",
     description:
-      "Developed the web interface for a data analytics system as the sole Front End Developer in a team of six students. This repository highlights my frontend work, minus databases and dynamic data",
+      "Developed the web interface for a data analytics system as the sole Front-End Developer in a team of six students. This repository highlights my frontend work, excluding databases, back-end service and dynamic data.",
     stack: ["Nuxt.Js", "Axios", "Vuetify"],
     live: "https://mngduyphuong.github.io/USKU-Frontend/",
     github: "https://github.com/mngduyphuong/USKU-Frontend",
@@ -86,7 +86,7 @@ const projects = [
     category: "front end",
     title: "Weather app",
     description:
-      "A simple Weather app in Vue.Js, we use the Open Weather Map API to make calls to a restful api to return the current weather data",
+      "A simple Weather app built in Vue.Js that uses the OpenWeatherMap API to fetch and display current weather data.",
     stack: ["Vue.Js 2", "Axios", "OpenWeatherMap API"],
     live: "https://mngduyphuong.github.io/Vue-weather-app/",
     github: "https://github.com/mngduyphuong/Vue-weather-app",
