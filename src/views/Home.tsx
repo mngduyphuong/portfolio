@@ -47,8 +47,14 @@ const Home = () => {
                               User:
                             </span>
                             <span className="flex-auto">
-                              Junior Full Stack Dev
+                              Data Operation Specialist
                             </span>
+                          </li>
+                          <li className="flex">
+                            <span className="font-semibold text-primary w-24">
+                              Dugeon:
+                            </span>
+                            <span className="flex-auto">Placard Pty. Ltd.</span>
                           </li>
                           <li className="flex">
                             <span className="font-semibold text-primary w-24">
@@ -68,7 +74,7 @@ const Home = () => {
                             <span className="font-semibold text-primary w-24">
                               Status:
                             </span>
-                            <span className="flex-auto">Open to work</span>
+                            <span className="flex-auto">Leveling up</span>
                           </li>
                         </ul>
                         <br />

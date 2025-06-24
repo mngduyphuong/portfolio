@@ -27,11 +27,11 @@ function Career() {
             </motion.div>
           </div>
           <div className="timeline-start md:text-end mb-10 p-2">
-            <time className="font-semibold ">Sep 2022 - Jan 2024</time>
+            <time className="font-semibold ">Jul 2025 - Current</time>
             <div className="font-bold text-lg text-primary">
-              Application Support Officer
+              Data Operation Specialist
             </div>
-            Gradient Information Systems <br />
+            Placard Australia <br />
           </div>
           <hr />
         </li>
@@ -43,7 +43,7 @@ function Career() {
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },
           }}
-          transition={{ duration: 1, delay: 1.5 }}
+          transition={{ duration: 1, delay: 2 }}
         >
           <div className="timeline-middle">
             <motion.div
@@ -59,15 +59,15 @@ function Career() {
               }}
               className=" h-8 w-8"
             >
-              <img src={`${basePath}` + "/monster.svg"} className=" h-8 w-8" />
+              <img src={`${basePath}` + "/dragon.svg"} className=" h-8 w-8" />
             </motion.div>
           </div>
           <div className="timeline-end md:text-end mb-5 md:mb-10 p-2">
-            <time className="font-semibold ">Jul 2021 - Jan 2022</time>
+            <time className="font-semibold ">Sep 2022 - Jan 2024</time>
             <div className="font-bold text-lg text-primary">
-              Front End Developer
+              Application Support Officer
             </div>
-            AgileTech VN
+            Gradient Information Systems
           </div>
           <hr />
         </motion.li>
@@ -95,10 +95,46 @@ function Career() {
               }}
               className=" h-8 w-8"
             >
+              <img src={`${basePath}` + "/monster.svg"} className=" h-8 w-8" />
+            </motion.div>
+          </div>
+          <div className="timeline-start md:text-end mb-5 md:mb-10 p-2">
+            <time className="font-semibold ">Jul 2021 - Jan 2022</time>
+            <div className="font-bold text-lg text-primary">
+              Front End Developer
+            </div>
+            AgileTech VN
+          </div>
+          <hr />
+        </motion.li>
+        <motion.li
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+          transition={{ duration: 1, delay: 4 }}
+        >
+          <div className="timeline-middle">
+            <motion.div
+              animate={{
+                y: [0, -10, 10, -10, 10, 0], // shaking animation on the y-axis
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 5,
+                ease: "easeInOut",
+                repeatDelay: 2,
+                delay: 5,
+              }}
+              className=" h-8 w-8"
+            >
               <img src={`${basePath}` + "/donut.svg"} className=" h-8 w-8" />
             </motion.div>
           </div>
-          <div className="timeline-start md:text-end mb-10 p-2">
+          <div className="timeline-end md:text-end mb-10 p-2">
             <time className="font-semibold ">Nov 2022 - Feb 2021</time>
             <div className="font-bold text-lg text-primary">
               Software Engineer Intern
@@ -107,7 +143,6 @@ function Career() {
           </div>
         </motion.li>
       </ul>
-
       <motion.div
         initial="hidden"
         animate="visible"
